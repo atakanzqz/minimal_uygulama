@@ -20,6 +20,22 @@ jobs:
         with:
           flutter-version: '3.32.4'
 
+      - name: Add Permissions to AndroidManifest.xml
+        run: |
+          MANIFEST=android/app/src/main/AndroidManifest.xml
+          echo "Checking and adding permissions if missing..."
+          grep -q 'android.permission.INTERNET' $MANIFEST || sed -i '/<manifest /a \
+          <uses-permission android:name="android.permission.INTERNET" />' $MANIFEST
+          grep -q 'android.permission.ACCESS_NETWORK_STATE' $MANIFEST || sed -i '/<manifest /a \
+          <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />' $MANIFEST
+          grep -q 'android.permission.ACCESS_WIFI_STATE' $MANIFEST || sed -i '/<manifest /a \
+          <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />' $MANIFEST
+          grep -q 'android.permission.READ_EXTERNAL_STORAGE' $MANIFEST || sed -i '/<manifest /a \
+          <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />' $MANIFEST
+          grep -q 'android.permission.WRITE_EXTERNAL_STORAGE' $MANIFEST || sed -i '/<manifest /a \
+          <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />' $MANIFEST
+          echo "Permissions checked/added."
+
       - name: Install Dependencies
         run: flutter pub get
 
@@ -30,7 +46,7 @@ jobs:
         run: flutter build apk --release
 
       - name: Upload APK Artifact
-        uses: actions/upload-artifact@v4  # 🔄 Güncellenmiş sürüm
+        uses: actions/upload-artifact@v4
         with:
           name: release-apk
           path: build/app/outputs/flutter-apk/app-release.apk
