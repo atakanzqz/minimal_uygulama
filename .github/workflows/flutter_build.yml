@@ -1,10 +1,10 @@
 name: Flutter Build
 
 on:
-  push:
+  workflow_dispatch:     # Manuel çalıştırma için
+  push:                  # Otomatik çalıştırma için
     branches:
-      - master # veya main, senin branch adına göre değişebilir
-  pull_request:
+      - main             # Eğer branch'in farklıysa, örneğin "master" ya da "dev", burayı değiştir
 
 jobs:
   build:
@@ -12,17 +12,18 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v3
+      - name: Checkout Repository
+        uses: actions/checkout@v3
 
       - name: Setup Flutter
         uses: subosito/flutter-action@v2
         with:
-          flutter-version: '3.22.1' # kullandığın Flutter versiyonunu yaz
+          flutter-version: '3.22.1'   # Kullandığın Flutter sürümünü yaz
 
       - name: Install Dependencies
         run: flutter pub get
 
-      - name: Analyze
+      - name: Analyze Code
         run: flutter analyze
 
       - name: Run Tests
@@ -31,8 +32,7 @@ jobs:
       - name: Build APK
         run: flutter build apk --release
 
-      # Dilersen build dosyasını artifacts olarak saklayabilirsin:
-      - name: Upload Build
+      - name: Upload APK Artifact
         uses: actions/upload-artifact@v3
         with:
           name: release-apk
