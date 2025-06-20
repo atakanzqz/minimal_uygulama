@@ -1,0 +1,90 @@
+{
+    "urunler": [
+        {
+            "id": 1,
+            "kategori": 1,
+            "isim": "Kiraz",
+            "resim": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.aseriyorum.net%2Fmedya%2F18-01-2018_17-50_1516287011.jpg&f=1&nofb=1&ipt=5c4304b227b36108eaba216fbd9567ebf5c0d43980757089cfbaa14c18079842"
+        },
+        {
+            "id": 2,
+            "kategori": 1,
+            "isim": "Elma",
+            "resim": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/Red_Apple.jpg/1200px-Red_Apple.jpg"
+        },
+        {
+            "id": 4,
+            "kategori": 1,
+            "isim": "Cennet Hurması",
+            "resim": "https://www.medicalpark.com.tr/uploads/cennet-hurmasi.jpeg"
+        },
+        {
+            "id": 5,
+            "kategori": 2,
+            "isim": "Dolma",
+            "resim": "https://cdn.yemek.com/mnresize/1250/833/uploads/2017/08/firinda-biber-dolmasi-onecikan-yeni.jpg"
+        },
+        {
+            "id": 6,
+            "kategori": 2,
+            "isim": "Menemen",
+            "resim": "https://www.diyetkolik.com/site_media/media/foodrecipe_images/kiymalimenemen.jpg"
+        },
+        {
+            "id": 7,
+            "kategori": 1,
+            "isim": "Erik",
+            "resim": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fideacdn.net%2Fidea%2Fek%2F88%2Fmyassets%2Fproducts%2F565%2Ferik-papaz-koyluce.jpg%3Frevision%3D1723882508&f=1&nofb=1&ipt=f92f8d083c450b86621ca64d783334071a7a75046b4d0291db84214d6b77e6bf"
+        },
+        {
+            "id": 8,
+            "kategori": 2,
+            "isim": "Omlet",
+            "resim": "https://cdn.yemek.com/mnresize/1250/833/uploads/2020/12/cecilli-omlet-thecook.jpg"
+        },
+        {
+            "id": 9,
+            "kategori": 1,
+            "isim": "Çağla",
+            "resim": "https://i12.haber7.net//haber/haber7/og_image/2023/15/cagla_meyvesi_bilinmeyen_faydalari_nelerdir_cagla_meyvesi_olgunlasinca_ne_olur_1681502062_7981.jpg"
+        },
+        {
+            "id": 15,
+            "kategori": 2,
+            "isim": "Cacık",
+            "resim": "https://i.lezzet.com.tr/images-xxlarge-recipe/cacik-4e7341b2-b2db-4d19-b930-104869dc150b.jpg"
+        },
+        {
+            "id": 16,
+            "kategori": 3,
+            "isim": "Süt",
+            "resim": "https://www.egricayir.com/resimler/resimler/balli_sut_nedir_nasil_yapilir_1648884557.png"
+        },
+        {
+            "id": 19,
+            "kategori": 3,
+            "isim": "Çay",
+            "resim": "https://i.nefisyemektarifleri.com/2023/09/28/cay-kac-kalori.jpg"
+        },
+        {
+            "id": 20,
+            "kategori": 3,
+            "isim": "Limonata",
+            "resim": "https://mutfaksirlari.com/wp-content/uploads/2018/08/ev-yapimi-limonata-tarifi-mutfak-sirlari.jpg"
+        }
+    ],
+    "kategoriler": [
+        {
+            "id": 1,
+            "isim": "Meyveler"
+        },
+        {
+            "id": 2,
+            "isim": "Yemekler"
+        },
+        {
+            "id": 3,
+            "isim": "İçecekler"
+        }
+    ]
+}
