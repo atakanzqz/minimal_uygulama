@@ -1,10 +1,10 @@
 name: Flutter Build
 
 on:
-  workflow_dispatch:     # Manuel çalıştırma için
-  push:                  # Otomatik çalıştırma için
+  workflow_dispatch:
+  push:
     branches:
-      - main             # Eğer branch'in farklıysa, örneğin "master" ya da "dev", burayı değiştir
+      - main  # veya kendi branch ismini yaz
 
 jobs:
   build:
@@ -18,7 +18,7 @@ jobs:
       - name: Setup Flutter
         uses: subosito/flutter-action@v2
         with:
-          flutter-version: '3.22.1'   # Kullandığın Flutter sürümünü yaz
+          flutter-version: '3.22.1'
 
       - name: Install Dependencies
         run: flutter pub get
@@ -33,7 +33,7 @@ jobs:
         run: flutter build apk --release
 
       - name: Upload APK Artifact
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4  # 🔄 Güncellenmiş sürüm
         with:
           name: release-apk
           path: build/app/outputs/flutter-apk/app-release.apk
